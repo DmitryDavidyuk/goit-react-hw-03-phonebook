@@ -9,7 +9,7 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
           <p>{name}:</p>
           <p>{number}</p>
           <button type="button" onClick={() => onDeleteContact(id)}>
-            Delete
+            Видалити
           </button>
         </li>
       ))}

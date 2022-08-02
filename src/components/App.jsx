@@ -45,8 +45,6 @@ class App extends Component {
       alert(`${number} is already in contacts.`);
     } else if (name.trim() === '' || number.trim() === '') {
       alert("Enter the contact's name and number phone!");
-    } else if (!/\d{3}[-]\d{2}[-]\d{2}/g.test(number)) {
-      alert('Enter the correct number phone!');
     } else {
       this.setState(({ contacts }) => ({
         contacts: [contact, ...contacts],
@@ -78,9 +76,9 @@ class App extends Component {
     const visibleContacts = this.getVisibleContacts();
     return (
       <div className={CSS.container}>
-        <h1>Phonebook</h1>
+        <h1>Телефонна книга</h1>
         <ContactsForm onSubmit={this.addContact} />
-        <h2>Contacts</h2>
+        <h2>Контакти</h2>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactsList
           contacts={visibleContacts}

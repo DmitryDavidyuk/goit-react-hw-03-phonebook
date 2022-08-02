@@ -2,7 +2,7 @@ import React from 'react';
 
 const Filter = ({ value, onChange }) => (
   <label>
-    Find contacts by name
+    Пошук контактів за іменами
     <input type="text" value={value} onChange={onChange} />
   </label>
 );
